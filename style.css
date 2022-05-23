@@ -20,18 +20,39 @@ body {
     background-color: hsl(204, 43%, 93%);
 }
 
+/* wraps around content and centers the grid layout */
 .wrapper {
     height: 100vh;
     width: 100vw;
     max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* wraps around body and creates grid layout */
 .content-wrapper {
+    width: 50%;
+    height: auto;
     display: grid;
-    grid-templat-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(2, 2fr);
     grid-template-rows: 2fr 2fr;
 }
 
+.main-body-content {
+    grid-column: 1 / span end;
+    grid-row: 1 / 2;
+}
+
+.content-right {
+    grid-column: 1 / 1;
+    grid-row: 2 / 2;
+}
+
+.content-left {
+    grid-column: 2 / 3;
+    grid-row: 2 / 2;
+}
 
 
 
