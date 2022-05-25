@@ -72,9 +72,9 @@ body {
     border-top: 2px solid hsl(179, 62%, 43%);
     border-right: 2px solid hsl(179, 62%, 43%);
     grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    grid-row: 2 / 4;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
 }
 
@@ -82,7 +82,7 @@ body {
     background-color: hsl(179, 62%, 43%);
     color: hsl(0, 0%, 100%);
     border-top: 2px solid hsl(179, 62%, 43%);
-    border-right: 2px solid hsl(179, 62%, 43%);
+    border-left: 2px solid hsl(218, 22%, 67%);
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     display: flex;
@@ -90,35 +90,47 @@ body {
     flex-direction: column;
 }
 
-
 .section-title-left {
     font-weight: 400;
     font-size: 1rem;
-    margin: 0 0 2em 1.5em;
+    margin: 2em 0 1em 1.5em;
 }
 
 .section-title-right {
     font-weight: 400;
     font-size: 1rem;
-    margin: 0 0 1.5em 1.5em;
+    margin: 0 0 1em 1.5em;
+}
+
+.section-content-right {
+    font-size: 0.75rem;
+    color: hsl(204, 43%, 93%);
+    margin-left: 1.5em;
+}
+
+.section-content-left {
+    margin-left: 1.5em;
+    font-size: 0.75rem;
 }
 
 .dollar-span {
+    display: inline-block;
     font-weight: 400;
-    font-size: 2em;
-    margin-bottom: 1em;
+    font-size: 1.5rem;
+    margin-left: 1em;
 }
 
 .section-span {
-    font-weight: lighter;
-}
-
-.section-content {
-    
+    display: inline-block;
+    font-weight: 400;
+    color: hsl(218, 22%, 67%);
+    font-size: 0.8rem;
+    margin-left: 1em;
 }
 
 .btn {
-    padding: 0.5em 1em 0.5em 1em;
+    align-self: center; /* Align self fixed the button from stretching within the flex container */
+    padding: 0.8em 4.5em 0.8em 4.5em;
     background-color: hsl(71, 73%, 54%);
     color: hsl(0, 0%, 100%);
     outline: none;
@@ -126,6 +138,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     border: 1px solid hsl(71, 73%, 54%);
+    margin-top: 1em;
 }
 
 .btn:hover {
